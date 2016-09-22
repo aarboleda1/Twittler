@@ -86,7 +86,7 @@ nav li{
   background: #e1e8ed;
   display: block;
   height: 50px;
-  width: 550px;
+  width: 510px;
   border-radius: 4px;
 }
 .user-tweet p {
@@ -96,5 +96,8 @@ form input {
   width: 70%;
   height: 90%;
   border-radius: 10px;
+}
+.input-text{
+  height: 20px;
 }
 
