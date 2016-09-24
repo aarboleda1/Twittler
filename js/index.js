@@ -6,7 +6,7 @@ $(document).ready(function() {
             //console.log(index)
             while (index > 0) {
                 var mostRecent = tweets[index];
-                var $tweet = $('<li />');
+                var $tweet = $('<li id="clickable-tweet" />');
                 $tweet.addClass(mostRecent.user);           
                 $tweet.html('@' + mostRecent.user + ': ' + mostRecent.message + ' ' + 'time: ' + parseTime(mostRecent.created_at));
                 $tweetsContainer.append($tweet);
@@ -32,20 +32,34 @@ $(document).ready(function() {
                 var mostRecentTweet = tweets[tweets.length - 1]
 
                 for (var i = 11; i < 12; i++) {
-                    var $newTweet = $('<li />');
+                    var $newTweet = $('<li id="clickable-tweet" />');
                     $newTweet.addClass(mostRecentTweet.user);
                     $newTweet.html('@' + mostRecentTweet.user + ': ' + mostRecentTweet.message + '     time: ' + parseTime(mostRecentTweet.created_at)); //insert the most recent tweet
                     $tweetsContainer.prepend($newTweet)
                 }
                 if (i < 50) window.setTimeout(appendNewTweet, Math.random() * 9000)
             }
-            appendNewTweet();
+            //appendNewTweet();
 
 
             /*This code should append all the tweets of a given user when clickec on */
-            $().on('click', function () {
-              //remove the current body
-              //append the desired user name
+            $('body').on('click', '#clickable-tweet', function () {
+      
+              //determine whose tweet it was (by class name)
+              console.log(this.className)
+              var className = this.className; //this refers to the object which was clicked. and its class name
+
+              //get all the elements by that class name aka all of one persons tweets
+              
+              //remove all the current tweets
+              //append all new tweets to the dom
+
+              
+              //remove current dom
+              //append the elements to the dom
+
+              console.log('testing for clicking list ')
+              //console.log()
 
             })
 
