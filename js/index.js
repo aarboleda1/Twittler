@@ -76,17 +76,17 @@ $(document).ready(function() {
             $button.on("click", function() {
                         //access the tweet from the user
                         var tweet = $("#user-input").val();
+                        if(tweet.length === 0){
+                           alert('please enter some text!')
+                        }
                         $("#user-input").val("");
                         //create a jquery object 
                         var $userTweet = $('<li />')
-                        $userTweet.html('user: ' + tweet);
-                        $tweetsContainer.prepend($userTweet);
-
-
-
+                        $userTweet.html('@user: ' + tweet + ' ' + parseTime(new Date));
+                        $tweetsContainer.prepend($userTweet );
                     }
 
-                ) //button.click
+            ) //button.click
     
 
    

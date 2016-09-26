@@ -42,7 +42,7 @@ ul {
   float: left;
   display: inline-block;
   list-style: none;
-  padding-left: 20px;
+  
   overflow: hidden;
 }
 li {
@@ -68,11 +68,12 @@ nav li{
 
 /*Display Tweets*/
 .tweets {
-  margin-top: 15px;
+  font-size: 18px;
   height: 600px;
-  width: 78%;
+  margin-top: 6%;
+  padding-left: 0%;
   text-align: left;
-  font-size: 18px
+  width: 90%;
 }
 
 /*Input Box for user tweets*/
@@ -88,7 +89,7 @@ nav li{
 }
 .user-tweet {
   height: 38px;
-  width: 94%;
+  width: 88%;
   position: absolute;
 }
 .user-tweet p {
@@ -108,6 +109,10 @@ form input {
   margin-top: -5px;
   margin-left: 8px;
   position: relative;
+}
+button {
+  float: right;
+  position: absolute;
 }
 button[type="submit"]{
   height: 25px;
