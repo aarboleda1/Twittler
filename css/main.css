@@ -24,6 +24,7 @@ section {
   float: right;
   width: 55%;
   height: 100%;
+  position: relative;
 }
 aside {
   float: left;
@@ -87,13 +88,14 @@ nav li{
 }
 .user-tweet {
   height: 38px;
-  width: 650px;
+  width: 94%;
+  position: absolute;
 }
 .user-tweet p {
   text-align: left;
 }
 form input {
-  height: 90%;
+  height: 30%;
   border-radius: 10px;
   padding: 6px 8px 6px 4px;;
   width: 470px;
@@ -105,9 +107,13 @@ form input {
 .twitter-box {
   margin-top: -5px;
   margin-left: 8px;
+  position: relative;
 }
 button[type="submit"]{
   height: 25px;
   width: 60px;
+  float: right;
 }
-
+.submit-button {
+  float: right;
+}
