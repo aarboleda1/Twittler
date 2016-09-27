@@ -37,7 +37,7 @@ $(document).ready(function() {
                 if(activeName === null || activeName === mostRecentTweet.user){
                     var $newTweet = $('<li class="clickable-tweet" />');
                     $newTweet.attr('name', mostRecentTweet.user);
-                    $newTweet.html('@' + mostRecentTweet.user + ': ' + mostRecentTweet.message + " " +  "<span style='font-size: 13px'>" + parseTime(mostRecentTweet.created_at) + "</span>"); //insert the most recent tweet
+                    $newTweet.html('@' +' <strong>' + mostRecentTweet.user + ':</strong> ' + mostRecentTweet.message + " " +  "<span style='font-size: 13px'>" + parseTime(mostRecentTweet.created_at) + "</span>"); //insert the most recent tweet
                     $tweetsContainer.prepend($newTweet)
                 } 
                 
@@ -82,7 +82,7 @@ $(document).ready(function() {
                         $("#user-input").val("");
                         //create a jquery object 
                         var $userTweet = $('<li />')
-                        $userTweet.html('@user: ' + tweet + ' ' + parseTime(new Date));
+                        $userTweet.html('@AntonArboleda: ' + tweet + ' ' + "<span style='font-size: 13px'>" + parseTime(new Date) + "<span style='font-size: 13px'>");
                         $tweetsContainer.prepend($userTweet );
                     }
 
@@ -102,7 +102,7 @@ $(document).ready(function() {
                         $("#user-input").val("");
                         //create a jquery object 
                         var $userTweet = $('<li />')
-                        $userTweet.html('@user: ' + tweet + ' ' + parseTime(new Date));
+                        $userTweet.html('@AntonArboleda: ' + tweet + ' ' + parseTime(new Date));
                         $tweetsContainer.prepend($userTweet );
                 }  
                 }      
