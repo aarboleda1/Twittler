@@ -102,7 +102,8 @@ $(document).ready(function() {
                         $("#user-input").val("");
                         //create a jquery object 
                         var $userTweet = $('<li />')
-                        $userTweet.html('@AntonArboleda: ' + tweet + ' ' + parseTime(new Date));
+                        $userTweet.html("<strong>" + '@AntonArboleda: ' + "</strong>" + tweet + ' ' + parseTime(new Date));
+                        
                         $tweetsContainer.prepend($userTweet );
                 }  
                 }      
