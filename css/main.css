@@ -6,8 +6,10 @@
 }
 body {
   background-color: #e1e8ed;
-  margin: 40px 200px 100px 200px;
+  margin: 40px auto 100px auto;
   position: relative;
+  max-width: 880px;
+
 }
 section, aside, footer {
   background: #fff;
@@ -15,17 +17,16 @@ section, aside, footer {
   border-radius: 6px;
   color: #fff;
   display: block;
-  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
   font-weight: 400;
   padding: 12px 17px;
   text-align: center;
 
 }
-
 section,
 aside,
 footer {
   margin: 0 1.5% 42px 1.5%;
+  background: #f8f8f8;
 }
 section {
   float: right;
@@ -33,13 +34,15 @@ section {
   height: 100%;
   position: relative;
   max-width: 650px;
+  border: #ddd 1px solid;    
 }
 aside {
   float: left;
-  width: 30%;
+  width: 35%;
   height: 80.3%;
   position: absolute;
   max-width: 340px;
+  border: #ddd 1px solid;
 
 }
 footer {
@@ -62,7 +65,11 @@ li {
   font-weight: 400;
   padding: 10px;
   font: black;
-  border-style:solid; border-color: grey; border-width: thin; border-radius: 4px; !important
+  border: #ddd 1px solid;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  border-top-color: #eee;
+  border-bottom-color: #bbb;
 }
 .nav-bar {
   display: inline;
@@ -81,10 +88,11 @@ nav li{
 .tweets {
   font-size: 18px;
   height: 600px;
-  margin-top: 6%;
+  margin-top: 9%;
   padding-left: 0%;
   text-align: left;
   width: 90%;
+  min-width: 427px;
 }
 
 /*Input Box for user tweets*/
@@ -97,10 +105,11 @@ nav li{
   height: 50px;
   width: 560px;
   border-radius: 4px;
+  min-width: 427px;
 }
 .user-tweet {
   height: 38px;
-  width: 86%;
+  width: 84%;
   position: absolute;
   text-align: left;
 }
@@ -108,7 +117,7 @@ nav li{
   text-align: left;
 }
 form input {
-  height: 30%;
+  height: 68%;
   border-radius: 10px;
   padding: 6px 8px 6px 4px;;
   width: 80%;
@@ -138,42 +147,64 @@ button[type="submit"]{
 .submit-button {
   float: right;
 }
+span {
+  font: 4px;
+}
 
 
 /*PROFILE PICTURE and ASIDE bar*/
 .profile-page {
- outline: 1px solid red !important;
+ /*outline: 1px solid red !important;*/
 }
 .profile-name {
- outline: 1px solid red !important;
+ /*outline: 1px solid red !important;*/
+ text-align: left;
 }
 .picture-info-container {
   /*for older browsers*/
   display: -webkit-flex;
   display: flex;
+  /*outline: 1px solid red !important;*/
   /*allows children to sit next to each other*/
 }
 /*children of the .picture-info-container*/
  .my-info {
-  margin: auto; 
+  height: 100%;
+  margin: 0px 0px 0px 0px; 
   max-width: 185px;
   max-height: 150px;
   width: 55%;
-  outline: 1px solid red !important;
+
+  padding-left: 5px;
+  /*outline: 1px solid red !important;*/  
 }
 .my-picture{
   max-width: 160px;
   max-height: 140px;
   width: 45%;
   height: 140px;
-  outline: 1px solid red !important;
+ /* outline: 1px solid red !important;*/
 }
 .prof-pic {
-  border-radius: 2px;
-  height: 95%;
-  width: 95%;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
 }
 h3 {
   color: black;
 }
+/*This is for the li text next to my profile picture*/
+.twitter-handle {
+  font-size: 14px;
+  text-align: left;
+  color: grey;
+  border: none;
+}
+.personal-info {
+  font-size: 15px;
+  text-align: left;
+  border: none;
+}
+
+
 /*children of the .picture-info-container*/

@@ -9,7 +9,7 @@ $(document).ready(function() {
                 var mostRecent = tweets[index];
                 var $tweet = $('<li class="clickable-tweet" />');
                 $tweet.attr('name', mostRecent.user);           
-                $tweet.html('@' + mostRecent.user + ': ' + mostRecent.message + ' ' + 'time: ' + parseTime(mostRecent.created_at));
+                $tweet.html('@' + ' <strong>' + mostRecent.user + ':</strong> ' + mostRecent.message + ' ' + " <span style='font-size: 13px'>" + parseTime(mostRecent.created_at)) + "</span>";
                 $tweetsContainer.append($tweet);
                 index -= 1
             }
@@ -37,7 +37,7 @@ $(document).ready(function() {
                 if(activeName === null || activeName === mostRecentTweet.user){
                     var $newTweet = $('<li class="clickable-tweet" />');
                     $newTweet.attr('name', mostRecentTweet.user);
-                    $newTweet.html('@' + mostRecentTweet.user + ': ' + mostRecentTweet.message + '     time: ' + parseTime(mostRecentTweet.created_at)); //insert the most recent tweet
+                    $newTweet.html('@' + mostRecentTweet.user + ': ' + mostRecentTweet.message + " " +  "<span style='font-size: 13px'>" + parseTime(mostRecentTweet.created_at) + "</span>"); //insert the most recent tweet
                     $tweetsContainer.prepend($newTweet)
                 } 
                 
@@ -56,15 +56,15 @@ $(document).ready(function() {
                 var correctStuff = $('li[name='+nameData+']')// a list with all the tweets // get all the tweets within that
                 //to append to the 
                
-                
-                $('ul').empty();
+                //changed to target ' ul with a class of tweetsonly'
+                $('.tweets').empty();
                 console.log(correctStuff)
                 //..loop thru then  append
                 $.each(correctStuff, function (index, tweet) {
                     $('ul').append(tweet);
                 })
 
-                correctStuff.appendTo($('ul'));
+                correctStuff.appendTo($('.tweets'));
                 //this is the element that is clicked on
                 //if it has a class 
                 //find all elements with that class name and append it to the DOM;                
@@ -86,7 +86,29 @@ $(document).ready(function() {
                         $tweetsContainer.prepend($userTweet );
                     }
 
-            ) //button.click
+            )
+
+            /*This code will submit the code on the enter key*/
+            $("#user-input").keypress(function () {
+                if("#user-input".which == 13){
+
+
+                if(key == 13) {
+                     console.log("handle caleld test")
+                      var tweet = $("#user-input").val();
+                        if(tweet.length === 0){
+                           alert('please enter some text!')
+                        }
+                        $("#user-input").val("");
+                        //create a jquery object 
+                        var $userTweet = $('<li />')
+                        $userTweet.html('@user: ' + tweet + ' ' + parseTime(new Date));
+                        $tweetsContainer.prepend($userTweet );
+                }  
+                }      
+
+            })    
+             //button.click
     
 
    
