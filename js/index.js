@@ -41,7 +41,7 @@ $(document).ready(function() {
                     $tweetsContainer.prepend($newTweet)
                 } 
                 
-                if (i < 50) window.setTimeout(appendNewTweet, Math.random() * 9000)
+                if (i < 50) window.setTimeout(appendNewTweet, Math.random() * 11000)
             }
             appendNewTweet();
 

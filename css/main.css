@@ -1,4 +1,9 @@
-
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   background-color: #e1e8ed;
   margin: 40px 200px 100px 200px;
@@ -14,6 +19,7 @@ section, aside, footer {
   font-weight: 400;
   padding: 12px 17px;
   text-align: center;
+
 }
 
 section,
@@ -26,12 +32,15 @@ section {
   width: 58%;
   height: 100%;
   position: relative;
+  max-width: 650px;
 }
 aside {
   float: left;
   width: 30%;
-  height: 600px;
+  height: 80.3%;
   position: absolute;
+  max-width: 340px;
+
 }
 footer {
   clear: both;
@@ -131,8 +140,40 @@ button[type="submit"]{
 }
 
 
-/*PROFILE PICTURE*/
-.profile-pic {
-  position: absolute;
-  text-align: left;
+/*PROFILE PICTURE and ASIDE bar*/
+.profile-page {
+ outline: 1px solid red !important;
 }
+.profile-name {
+ outline: 1px solid red !important;
+}
+.picture-info-container {
+  /*for older browsers*/
+  display: -webkit-flex;
+  display: flex;
+  /*allows children to sit next to each other*/
+}
+/*children of the .picture-info-container*/
+ .my-info {
+  margin: auto; 
+  max-width: 185px;
+  max-height: 150px;
+  width: 55%;
+  outline: 1px solid red !important;
+}
+.my-picture{
+  max-width: 160px;
+  max-height: 140px;
+  width: 45%;
+  height: 140px;
+  outline: 1px solid red !important;
+}
+.prof-pic {
+  border-radius: 2px;
+  height: 95%;
+  width: 95%;
+}
+h3 {
+  color: black;
+}
+/*children of the .picture-info-container*/
