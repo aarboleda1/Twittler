@@ -1,2 +1,2 @@
 # Twittler
-My own version of Twitter. I build this using Jquery and CSS for styling
+My own version of Twitter for Hack Reactor Pre-Course. Built using Jquery and CSS for styling
